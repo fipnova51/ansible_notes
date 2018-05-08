@@ -1,0 +1,7 @@
+# Application servers
+[app]
+192.168.33.12 var1='value of var1 specific to 192.168.33.12'
+192.168.33.13 var1='value of var1 specific to 192.168.33.13'
+
+[app:vars]
+var_app_group='value for all servers in app group'

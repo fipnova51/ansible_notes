@@ -1,0 +1,14 @@
+---
+- hosts: '{{ target }}'
+
+  tasks:
+     - name: define variable in .profile file
+       lineinfile: dest=~/.profile regexp=^SIMON line=SIMON='hello ansible'
+
+     - name: get the value of variable SIMON in .profile file
+       shell: '. ~/.profile && echo $SIMON'
+       register: foo
+
+     - name: display value of variable SIMON
+       debug: msg="The variable SIMON is set to {{ foo.stdout }}"
+...

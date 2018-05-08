@@ -1,0 +1,6 @@
+---
+- hosts: '{{ target }}'
+  tasks:
+     - name: display value of variable target
+       debug: msg="The variable target has the value  {{ target }}"
+...

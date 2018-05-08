@@ -1,0 +1,10 @@
+---
+- hosts: '{{ target }}'
+
+  tasks:
+  - name: display variable assigned to group app
+    debug: msg='{{ var_app_group }}'
+
+  - name: display variable per server
+    debug: msg='{{ hostvars['192.168.33.12']['var1'] }}'
+...

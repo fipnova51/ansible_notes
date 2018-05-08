@@ -1,0 +1,8 @@
+---
+- hosts: '{{ target }}'
+  vars:
+    foo: bar
+  tasks:
+    - name: display value of foo
+      debug: msg="The variable foo is set to {{ foo }}"
+...
